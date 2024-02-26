@@ -8,7 +8,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
   standalone: true,
   imports: [RouterOutlet,NavbarComponent,HomepageComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'shop';

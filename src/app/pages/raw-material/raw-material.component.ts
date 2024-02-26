@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   standalone: true,
   // imports: [CarouselModule,ButtonModule],
   templateUrl: './raw-material.component.html',
-  styleUrl: './raw-material.component.css'
+  styleUrl: './raw-material.component.scss'
 })
 export class RawMaterialComponent {
 
