@@ -1,7 +1,16 @@
-.label{
+.label {
     margin-left: 30px;
 }
 
-.p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button .p-link{
-    background-color:#22c55e !important;
+:host::ng-deep {
+    .p-carousel-indicators {
+        button{
+            height: 5px;
+            width: 8px;
+            border-radius: 100%;
+        }
+        .p-highlight>button {
+            background-color: #22c55e !important;
+        }
+    }
 }
