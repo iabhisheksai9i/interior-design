@@ -2,23 +2,39 @@ import { Component } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
-
+import { CommonModule } from '@angular/common';
+import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [CarouselModule,ButtonModule,DialogModule],
+  imports: [CarouselModule,ButtonModule,DialogModule,CommonModule],
   templateUrl: './homepage.component.html',
-  styleUrl: './homepage.component.scss'
+  styleUrl: './homepage.component.scss',
+  providers:[DynamicDialogRef, DynamicDialogConfig]
 })
 export class HomepageComponent {
 
-  visible:boolean=false;
+  visible = false;
+  product1:any={}
+
+  responsiveOptions: any[] | undefined;
+  responsiveOptionssmall: any[] | undefined;
 
   products:any=[
     {
-      image:"https://5.imimg.com/data5/ML/MU/ZQ/SELLER-8278996/glass-door-500x500.jpg",
-      name:'Dore with glass'
+      image:'https://5.imimg.com/data5/ML/MU/ZQ/SELLER-8278996/glass-door-500x500.jpg',
+      name:'Glass door',
+      color:'black',
+      glass:'designer',
+      handel_color:'silver',
+      material:'Aluminium',
+      dimension:'16mm x 45mm x 1.5mm Thick',
+      design:'Sleek / Slim',
+      size:'16 x 45mm',
+      shape:'Rectangular'
+
+
     },
     {
       image:"https://i.pinimg.com/originals/05/a6/22/05a6228e4c45eaeee3f76a227cb8effc.jpg"
@@ -33,7 +49,16 @@ export class HomepageComponent {
 
   latestdesign:any=[
     {
-      image:"https://5.imimg.com/data5/ML/MU/ZQ/SELLER-8278996/glass-door-500x500.jpg"
+      image:"https://5.imimg.com/data5/ML/MU/ZQ/SELLER-8278996/glass-door-500x500.jpg",
+      name:'Glass door',
+      color:'black',
+      glass:'designer',
+      handel_color:'silver',
+      material:'Aluminium',
+      dimension:'16mm x 45mm x 1.5mm Thick',
+      design:'Sleek / Slim',
+      size:'16 x 45mm',
+      shape:'Rectangular'
     },
     {
       image:"https://i.pinimg.com/originals/05/a6/22/05a6228e4c45eaeee3f76a227cb8effc.jpg"
@@ -58,10 +83,51 @@ export class HomepageComponent {
     }
   ]
 
-  showDialog(){
+  showDialog(product:any){
     this.visible=true
+    this.product1=product
   }
 
+  ngOnInit() {
+        this.responsiveOptions = [
+        {
+            breakpoint: '1400px',
+            numVisible: 3,
+            numScroll: 3
+        },
+        {
+            breakpoint: '1220px',
+            numVisible: 2,
+            numScroll: 2
+        },
+        {
+            breakpoint: '1100px',
+            numVisible: 1,
+            numScroll: 1
+        }
+    ];
+    this.responsiveOptionssmall = [
+      {
+          breakpoint: '1400px',
+          numVisible: 4,
+          numScroll: 1
+      },
+      {
+          breakpoint: '1220px',
+          numVisible: 3,
+          numScroll: 1
+      },
+      {
+          breakpoint: '700px',
+          numVisible: 1,
+          numScroll: 1
+      }
+  ];
 }
+
+}
+
+
+
 
 

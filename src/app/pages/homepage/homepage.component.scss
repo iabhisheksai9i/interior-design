@@ -14,3 +14,21 @@
         }
     }
 }
+
+@media screen and (max-width:500px) {
+    h2{
+        font-size: 17px;
+    }
+    p{
+        font-size: 12px;
+        font-weight: 500;
+    }
+}
+
+td,th{
+    border-bottom: 1px solid #e5ebf1;
+    padding: 12px;
+}
+th{
+    border-right: 1px solid #e5ebf1;
+}
