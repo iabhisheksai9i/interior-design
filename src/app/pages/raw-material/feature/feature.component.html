@@ -1,0 +1,62 @@
+<div class="">
+  <p>Approx.Price=Rs100/sq.feet</p>
+<h4>Product Details:</h4>
+<div class="flex justify-content-start">
+<div>Usage</div>
+<div>Home</div>
+</div>
+<div class="flex justify-content-start">
+<div>Material</div>
+<div>Glass</div>
+</div>
+<div class="flex justify-content-start">
+    <div>Thickness</div>
+    <div>2mm</div>
+</div>
+
+</div>
+<div class="md:flex justify-content-evenly surface-ground" *ngFor="let product of product1">
+<div class="col-12 md:col-6 p-0">
+  <div class=" h-2rem">
+      <h3>{{product.name}}</h3>
+  </div>
+  <div>
+<img src="{{product.image}}" width="100%">
+</div>
+</div>
+<div class="border-1 surface-border bg-white col-12 md:col-6">
+  <h2>Product Details</h2>
+   <table class="w-12">
+       <tr>
+         <th class="text-left w-3 text-xs md:text-base">Name</th>
+         <td class="text-end text-xs md:text-base">{{product.name}}</td>
+       </tr>
+       <tr>
+         <th class="text-left line-height-3">Color</th>
+         <td class="">{{product.color}}</td>
+       </tr>
+       <tr>
+         <th class="text-left">Handel color</th>
+         <td class="">{{product.handel_color}}</td>
+       </tr>
+       <tr>
+         <th class="text-left">Material</th>
+         <td class="">{{product.material}}</td>
+       </tr>
+       <tr>
+           <th class="text-left">Size</th>
+           <td class="">{{product.size}}</td>
+       </tr>
+       <tr>
+           <th class="text-left">Dimentions</th>
+           <td class="">{{product.dimension}}</td>
+       </tr>
+       <tr>
+           <th class="text-left">Shape</th>
+           <td class="">{{product.shape}}</td>
+       </tr>
+     </table>
+     <p>We can supply aluminium slim profile for glass doors in quanity. 
+       These are readily available in stock and are supplied at reasonable rate</p>
+</div>
+</div>
