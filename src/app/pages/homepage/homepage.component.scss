@@ -1,12 +1,19 @@
 .label {
     margin-left: 30px;
+    padding:3px;
+    border-bottom: 2px solid #212529;
+    width: 35%;
 }
 
 :host::ng-deep {
+    .p-carousel-item{
+        display: flex;
+        align-items: center;
+    }
     .p-carousel-indicators {
         button{
             height: 5px;
-            width: 8px;
+            width: 5px;
             border-radius: 100%;
         }
         .p-highlight>button {
