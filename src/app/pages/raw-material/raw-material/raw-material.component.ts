@@ -27,4 +27,8 @@ export class RawMaterialComponent {
    this.rawMaterial = this.rawMaterialService.getRowproduct();
   }
 
+  getObjectdada(product:any){
+    this.rawMaterialService.getObjectData(product)
+  }
+
  }

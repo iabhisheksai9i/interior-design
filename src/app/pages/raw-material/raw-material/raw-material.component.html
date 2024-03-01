@@ -1,9 +1,9 @@
-<div class="border-1 surface-border">
+<div class="border-1 surface-border pt-6">
   <p-carousel [value]="rawMaterial" [numVisible]="2" [numScroll]="1">
     <ng-template let-product pTemplate="item">
         <div class="border-1 surface-border border-round m-2 text-center p-2">
             <div class="">
-                <img src="{{ product.image }}" [alt]="product.name" routerLink="../raw-material/{{product.id}}/feature" class="w-12 lg:w-10 shadow-2" />
+                <img src="{{ product.image }}" [alt]="product.name" (click)="getObjectdada(product)" routerLink="../raw-material/{{product.id}}/feature" class="w-12 lg:w-10 shadow-2" />
             </div>
         </div>
     </ng-template>

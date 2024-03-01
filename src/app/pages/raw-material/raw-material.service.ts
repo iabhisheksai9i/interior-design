@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class RawMaterialService {
 constructor() { }
+product1={}
   products:any=[
     { id:'1',
       image:"https://5.imimg.com/data5/ML/MU/ZQ/SELLER-8278996/glass-door-500x500.jpg",
@@ -64,6 +65,13 @@ constructor() { }
 
 getRowproduct(){
   return this.products
+}
+
+getObjectData(product:any){
+this.product1=product
+}
+data(){
+  return this.product1
 }
 
 }
