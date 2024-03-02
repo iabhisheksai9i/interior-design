@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, ElementRef } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 
@@ -10,5 +11,6 @@ import { ButtonModule } from 'primeng/button';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  constructor() {}
 
 }
