@@ -1,11 +1,22 @@
 .label {
     margin-left: 30px;
     padding:3px;
-    border-bottom: 2px solid #212529;
-    width: 35%;
 }
 
 :host::ng-deep {
+    .p-carousel{
+        position: relative;
+    }
+    .p-ripple{
+        position: absolute;
+    }
+    .p-carousel-prev{
+        left: 0;
+        z-index: 500;
+    }
+    .p-carousel-next{
+        right: 0;
+    }
     .p-carousel-item{
         display: flex;
         align-items: center;

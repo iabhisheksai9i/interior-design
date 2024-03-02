@@ -24,11 +24,11 @@ export class RawMaterialComponent {
     this.getRowproduct();
   }
    getRowproduct(){
-   this.rawMaterial = this.rawMaterialService.getRowproduct();
+   this.rawMaterial = this.rawMaterialService.products;
   }
 
   getObjectdada(product:any){
-    this.rawMaterialService.getObjectData(product)
+    this.rawMaterialService.product = product;
   }
 
  }

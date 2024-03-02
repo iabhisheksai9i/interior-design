@@ -3,21 +3,22 @@
     <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [indicatorStyleClass]="'color'" [responsiveOptions]="responsiveOptions">
     <ng-template let-product pTemplate="item">
         <div class="border-1 surface-border border-round m-2 text-center w-12">
-            <div class="" (click)="showDialog(product)">
+            <div class="">
                 <img src="{{ product.image }}" [alt]="product.name" class="w-12 shadow-2" />
             </div>
         </div>
     </ng-template>
 </p-carousel>
 </div>
+
 <div>
 
     <h2 class="label">LATEST DESIGN</h2>
     <div>
         <p-carousel [value]="latestdesign" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptionssmall">
             <ng-template let-product pTemplate="item">
-                <div class="m-2 text-center">
-                    <div class="mb-3" (click)="showDialog(product)">
+                <div class="m-2 text-center w-12">
+                    <div class="mb-3">
                         <img src="{{ product.image }}" [alt]="product.name" class="w-12 shadow-2" />
                     </div>
                 </div>
@@ -33,8 +34,8 @@
     <div>
         <p-carousel [value]="latestdesign" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptionssmall">
             <ng-template let-product pTemplate="item">
-                <div class="m-2 text-center">
-                    <div class="mb-3" (click)="showDialog(product)">
+                <div class="m-2 text-center w-12">
+                    <div class="mb-3">
                         <img src="{{ product.image }}" [alt]="product.name" class="w-12 shadow-2" />
                     </div>
                 </div>
@@ -50,8 +51,8 @@
     <div>
         <p-carousel [value]="latestdesign" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptionssmall">
             <ng-template let-product pTemplate="item">
-                <div class="m-2 text-center">
-                    <div class="mb-3" (click)="showDialog(product)">
+                <div class="m-2 text-center w-12">
+                    <div class="mb-3">
                         <img src="{{ product.image }}" [alt]="product.name" class="w-12 shadow-2" />
                     </div>
                 </div>
@@ -67,8 +68,8 @@
     <div>
         <p-carousel [value]="latestdesign" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptionssmall">
             <ng-template let-product pTemplate="item">
-                <div class="m-2 text-center">
-                    <div class="mb-3" (click)="showDialog(product)">
+                <div class="m-2 text-center w-12">
+                    <div class="mb-3">
                         <img src="{{ product.image }}" [alt]="product.name" class="w-12 shadow-2" />
                     </div>
                 </div>
@@ -85,7 +86,7 @@
         <p-carousel [value]="clinic" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptionssmall" class="flex align-items-center">
             <ng-template let-product pTemplate="item">
                 <div class="m-2 text-center w-12">
-                    <div class="mb-3 flex align-items-center" (click)="showDialog(product)">
+                    <div class="mb-3 flex align-items-center">
                         <img src="{{ product.image }}" [alt]="product.name" class="w-12 shadow-2" />
                     </div>
                 </div>
@@ -96,7 +97,7 @@
 </div>
 </div>
 
-<p-dialog header="Detail" [(visible)]="visible" [maximizable]="true" [style]="{width: '90vw'} ">
+<!-- <p-dialog header="Detail" [(visible)]="visible" [maximizable]="true" [style]="{width: '90vw'} ">
     <div><h2>Product</h2></div>
     <div class="md:flex justify-content-evenly surface-ground">
     <div class="col-12 md:col-6 p-0">
@@ -143,6 +144,4 @@
             These are readily available in stock and are supplied at reasonable rate</p>
  </div>
  </div>
-</p-dialog>
-
-
+</p-dialog> -->

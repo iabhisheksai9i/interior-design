@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RawMaterialService } from '../raw-material.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-feature',
@@ -10,14 +11,22 @@ import { RawMaterialService } from '../raw-material.service';
   styleUrl: './feature.component.scss'
 })
 export class FeatureComponent {
-  product:any=[]
+  product: any = {}
+  id: string = '';
+
   constructor(
-    private rawmaterial:RawMaterialService
-  ){
-    this.getProduct()
+    private rawmaterialService: RawMaterialService,
+    private activatedRoute: ActivatedRoute,
+    ) {  }
+
+  ngOnInit() {
+    this.activatedRoute.params.subscribe(param => {
+      this.id = param['id'];
+      this.getProduct()
+    })
   }
 
-  getProduct(){
-    this.product=this.rawmaterial.data()
+  getProduct() {
+   this.product = this.rawmaterialService.products.find(product => product.id === this.id);
   }
 }

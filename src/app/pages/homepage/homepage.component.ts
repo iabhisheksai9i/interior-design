@@ -4,22 +4,25 @@ import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { CommonModule } from '@angular/common';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [CarouselModule,ButtonModule,DialogModule,CommonModule],
+  imports: [CarouselModule,ButtonModule,DialogModule,CommonModule,RouterModule],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss',
   providers:[DynamicDialogRef, DynamicDialogConfig]
 })
 export class HomepageComponent {
 
+
   visible = false;
   product1:any={}
 
   responsiveOptions: any[] | undefined;
   responsiveOptionssmall: any[] | undefined;
+
 
   products:any=[
     {
