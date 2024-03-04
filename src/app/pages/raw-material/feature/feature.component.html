@@ -1,25 +1,39 @@
-<div class="md:flex justify-content-evenly surface-ground pt-6 p-3">
-<div class="col-12 md:col-6 p-0">
-  <div class=" h-2rem">
-      <h3>{{product.name}}</h3>
-  </div>
-  <div>
-<img src="{{product.image}}" width="100%">
+<div class=" pt-4 surface-ground">
+  <h1 class="flex justify-content-center">{{product.name}}</h1>
+
+
+<div class="flex md:flex-nowrap flex-wrap-reverse surface-ground pl-3 pr-3">
+<div class="col-12 md:col-6 p-0 mr-2">
+ 
+  <div class="flex align-items-center">
+<img  src="{{product.image}}" width="100%" height="540px">
 </div>
 </div>
-<div class="border-1 surface-border bg-white col-12 md:col-6">
-  <h2>Product Details</h2>
+<div class="border-1 surface-border bg-white col-12 md:col-6 relative ">
+ <div class="bg-blue-400 border-noround p-4 w-5rem absolute right-0 margin-t position" routerLink="../">
+  <a class="no-underline" href="raw-material/{{product.id}}/feature#footer">
+    Let's 
+  <br>
+ <strong>talk</strong> 
+  </a>
+ </div>
+ <div class="bg position1"></div>
+<h2 class="mt-8">Product Details</h2>
    <table class="w-12">
        <tr>
          <th class="text-left w-3 text-xs md:text-base">Name</th>
          <td class="text-end text-xs md:text-base">{{product.name}}</td>
        </tr>
        <tr>
+        <th class="text-left w-3 text-xs md:text-base">Price</th>
+        <td class="text-end text-xs md:text-base">{{product.price}}/sq.feet</td>
+      </tr>
+       <tr>
          <th class="text-left line-height-3">Color</th>
          <td class="">{{product.color}}</td>
        </tr>
        <tr>
-         <th class="text-left">Handel color</th>
+         <th class="text-left ">Handel color</th>
          <td class="">{{product.handel_color}}</td>
        </tr>
        <tr>
@@ -39,7 +53,10 @@
            <td class="">{{product.shape}}</td>
        </tr>
      </table>
-     <p>We can supply aluminium slim profile for glass doors in quanity. 
-       These are readily available in stock and are supplied at reasonable rate</p>
+     <div class="border-top-1 ">
+      <p class="text-sm ml-2">We can supply aluminium slim profile for glass doors in quanity. 
+        These are readily available in stock and are supplied at reasonable rate</p>
+     </div>
+</div>
 </div>
 </div>
