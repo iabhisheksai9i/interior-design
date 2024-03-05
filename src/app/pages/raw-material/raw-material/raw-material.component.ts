@@ -15,6 +15,8 @@ import { CardModule } from 'primeng/card';
 })
 export class RawMaterialComponent {
  rawMaterial:any[]=[];
+ doors:any[]=[]
+ handel:any[]=[]
 
   constructor (
     private rawMaterialService:RawMaterialService
@@ -26,10 +28,13 @@ export class RawMaterialComponent {
   }
    getRowproduct(){
    this.rawMaterial = this.rawMaterialService.products;
+   this.doors = this.rawMaterialService.doors;
+   this.handel = this.rawMaterialService.handel
+
   }
 
   getObjectdada(product:any){
     this.rawMaterialService.product = product;
-  }
+    }
 
  }

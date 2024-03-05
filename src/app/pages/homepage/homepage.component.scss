@@ -1,6 +1,9 @@
 .label {
     margin-left: 30px;
     padding:3px;
+    margin-top: 0;
+    margin-bottom: 7px;
+    text-align: center;
 }
 
 :host::ng-deep {
@@ -10,16 +13,26 @@
     .p-ripple{
         position: absolute;
     }
+    .p-icon {
+        width: 23px;
+        height: 2rem;
+    }
     .p-carousel-prev{
         left: 0;
-        z-index: 500;
+        z-index: 100;
+        color: black;
+        font-size: 100px;
     }
     .p-carousel-next{
         right: 0;
+        z-index: 100;
+        color: black;
     }
-    .p-carousel-item{
-        display: flex;
-        align-items: center;
+    .p-carousel-next:enabled{
+        background-color: #e5ebf1;
+    }
+    .p-carousel-prev:enabled{
+        background-color: #e5ebf1;
     }
     .p-carousel-indicators {
         button{
@@ -31,6 +44,12 @@
             background-color: #22c55e !important;
         }
     }
+}
+
+h2{
+    color: lightslategray;
+    font-family: math;
+    text-decoration: underline;
 }
 
 @media screen and (max-width:500px) {
@@ -49,4 +68,13 @@ td,th{
 }
 th{
     border-right: 1px solid #e5ebf1;
+}
+
+.crousel-img{
+    height:400px;
+    width:100%;
+}
+
+.small-image{
+    height: 250px;
 }

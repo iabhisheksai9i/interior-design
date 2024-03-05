@@ -168,4 +168,41 @@ export class RawMaterialService {
     }
   ]
 
+  doors=[
+    {
+      name:'light Brown Door',
+      image:'https://saina-doors.com/wp-content/uploads/2024/01/image-1.jpg"',
+    },
+    {
+      name:'light Brown Door',
+      image:'https://saina-doors.com/wp-content/uploads/2024/01/image-2.jpg',
+    },
+    {
+      name:'light Brown Door',
+      image:'https://saina-doors.com/wp-content/uploads/2024/01/image-3.jpg',
+    },
+    {
+      name:'light Brown Door',
+      image:'https://saina-doors.com/wp-content/uploads/2024/01/image-4.jpg',
+    },
+  ]
+
+  handel=[
+    {
+      image:'https://m.media-amazon.com/images/I/81CPZ8lW1vL._AC_UF1000,1000_QL80_.jpg',
+      name:'Lotus Door Handles',
+    },
+    {
+      image:'https://rukminim2.flixcart.com/image/850/1000/l0cr4i80/knob-handle/r/f/t/matte-cool-md-12-m-lapo-original-imagc5js58qhaqzx.jpeg?q=90&crop=false',
+      name:'LAPO Cool Door Handles'
+    },
+    {
+      image:'https://m.media-amazon.com/images/I/81t3jEg2TfL._AC_UF1000,1000_QL80_.jpg',
+      name:'Lotus Door Handles',
+    },
+    {
+      image:'https://m.media-amazon.com/images/I/516Amgkl-kL._AC_UF1000,1000_QL80_.jpg',
+      name:'LAPO Orra 12 Inch Stainless Steel',
+    },
+  ]
 }

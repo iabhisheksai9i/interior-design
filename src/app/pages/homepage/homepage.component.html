@@ -1,10 +1,10 @@
 <div>
-<div class="border-1 surface-border pt-6 w-12 h-3">
-    <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [indicatorStyleClass]="'color'" [responsiveOptions]="responsiveOptions">
+<div class=" pt-6 w-12 h-3">
+    <p-carousel [value]="products" [numVisible]="1" [numScroll]="1" [indicatorStyleClass]="'color'" [responsiveOptions]="responsiveOptions">
     <ng-template let-product pTemplate="item">
-        <div class="border-1 surface-border border-round m-2 text-center w-12">
+        <div class="border-1 surface-border border-round text-center w-12">
             <div class="">
-                <img src="{{ product.image }}" [alt]="product.name" class="w-12 shadow-2" />
+                <img src="https://5.imimg.com/data5/SELLER/Default/2023/9/348068830/ND/UN/MS/3168951/showroom-glass-door-500x500.jpg" [alt]="product.name" class="crousel-img shadow-2" />
             </div>
         </div>
     </ng-template>
@@ -13,13 +13,13 @@
 
 <div>
 
-    <h2 class="label">LATEST DESIGN</h2>
+    <h2 class="label">Latest Design</h2>
     <div>
         <p-carousel [value]="latestdesign" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptionssmall">
             <ng-template let-product pTemplate="item">
-                <div class="m-2 text-center w-12">
-                    <div class="mb-3">
-                        <img src="{{ product.image }}" [alt]="product.name" class="w-12 shadow-2" />
+                <div class="text-center w-12 ">
+                    <div class="p-2 border-1 surface-border border-round m-1">
+                        <img src="{{ product.image }}" [alt]="product.name" class="small-image w-12 shadow-2 border-round" />
                     </div>
                 </div>
             </ng-template>
@@ -30,13 +30,39 @@
 
 <div>
 
-    <h2 class="label">OFFICE</h2>
+    <h2 class="label">Office</h2>
     <div>
         <p-carousel [value]="latestdesign" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptionssmall">
             <ng-template let-product pTemplate="item">
-                <div class="m-2 text-center w-12">
-                    <div class="mb-3">
-                        <img src="{{ product.image }}" [alt]="product.name" class="w-12 shadow-2" />
+                <div class="text-center w-12 ">
+                    <div class="p-2 border-1 surface-border border-round m-1">
+                        <img src="{{ product.image }}" [alt]="product.name" class="small-image w-12 shadow-2 border-round" />
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+        
+    </div>
+</div>
+
+<div class="md:flex">
+    <div class="col-12 md:col-6 p-0 ">
+        <img src="../../../../assets/images/frame-1.png" width="100%" height="350px">
+    </div>
+    <div class=" col-12 md:col-6 p-0">
+        <img src="../../../../assets/images/frame-2.png" width="100%" height="350px">
+    </div>
+</div>
+
+<div>
+
+    <h2 class="label">House</h2>
+    <div>
+        <p-carousel [value]="latestdesign" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptionssmall">
+            <ng-template let-product pTemplate="item">
+                <div class="text-center w-12">
+                    <div class="p-2 border-1 surface-border border-round m-1">
+                        <img src="{{ product.image }}" [alt]="product.name" class="small-image w-12 shadow-2 border-round" />
                     </div>
                 </div>
             </ng-template>
@@ -47,13 +73,13 @@
 
 <div>
 
-    <h2 class="label">HOUSE</h2>
+    <h2  class="label">Restaurant</h2>
     <div>
         <p-carousel [value]="latestdesign" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptionssmall">
             <ng-template let-product pTemplate="item">
-                <div class="m-2 text-center w-12">
-                    <div class="mb-3">
-                        <img src="{{ product.image }}" [alt]="product.name" class="w-12 shadow-2" />
+                <div class="text-center w-12">
+                    <div class="p-2 border-1 surface-border border-round m-1">
+                        <img src="{{ product.image }}" [alt]="product.name" class="small-image w-12 shadow-2 border-round" />
                     </div>
                 </div>
             </ng-template>
@@ -63,31 +89,13 @@
 </div>
 
 <div>
-
-    <h2  class="label">RESTAURENT</h2>
+    <h2 class="label">Lab and Clinic</h2>
     <div>
-        <p-carousel [value]="latestdesign" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptionssmall">
+        <p-carousel [value]="clinic" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptionssmall">
             <ng-template let-product pTemplate="item">
-                <div class="m-2 text-center w-12">
-                    <div class="mb-3">
-                        <img src="{{ product.image }}" [alt]="product.name" class="w-12 shadow-2" />
-                    </div>
-                </div>
-            </ng-template>
-        </p-carousel>
-        
-    </div>
-</div>
-
-<div>
-
-    <h2 class="label">LAB AND CLINIC</h2>
-    <div class="flex align-items-center">
-        <p-carousel [value]="clinic" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptionssmall" class="flex align-items-center">
-            <ng-template let-product pTemplate="item">
-                <div class="m-2 text-center w-12">
-                    <div class="mb-3 flex align-items-center">
-                        <img src="{{ product.image }}" [alt]="product.name" class="w-12 shadow-2" />
+                <div class="w-12">
+                    <div class="p-2 border-1 surface-border border-round m-1">
+                        <img src="{{ product.image }}" [alt]="product.name" class="small-image w-12 shadow-2 border-round" />
                     </div>
                 </div>
             </ng-template>

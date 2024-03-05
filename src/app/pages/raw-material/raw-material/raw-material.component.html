@@ -1,21 +1,27 @@
-<div class="border-1 surface-border pt-6">
-  <p-carousel [value]="rawMaterial" [numVisible]="2" [numScroll]="1">
-    <ng-template let-product pTemplate="item">
-        <div class="border-1 surface-border border-round m-2 text-center p-2">
-            <div class="">
-                <img src="{{ product.image }}" [alt]="product.name" (click)="getObjectdada(product)" routerLink="../raw-material/{{product.id}}/feature" class="w-12 lg:w-10 shadow-2" />
-            </div>
+<div class="pt-7">
+<h2 class="text-center">Top Seller Doors</h2>
+<div class="grid w-12 p-5">
+    <div *ngFor="let product of doors" class="col-12 sm:col-6 lg:col-3 relative" routerLink="../raw-material/{{product.id}}/feature">
+        <div class="label absolute">
+            <span>In Stock</span>
         </div>
-    </ng-template>
-</p-carousel>
-</div> 
+        <div class="">
+            <img src="{{product.image}}" height="300px" width="100%">
+        </div>
+        <div>
+            <h5 class="mb-0">{{product.name}}</h5>
+        </div>
+
+    </div>
+
+</div>
 
 <div class="grid w-12 p-5">
 <div *ngFor="let product of rawMaterial" class="col-12 sm:col-6 lg:col-3 relative" routerLink="../raw-material/{{product.id}}/feature">
     <div class="label absolute">
         <span>In Stock</span>
     </div>
-    <div class="p-2 opacity-100">
+    <div class="">
         <img src="{{product.image}}" class="w-full h-auto">
     </div>
     <div>
@@ -28,8 +34,23 @@
     </div>
 </div>
 </div>
-
-
-
-
-  
+<h2 class="text-center">Top Rated Handle</h2>
+<div class="grid w-12 p-5">
+    <div *ngFor="let product of handel" class="col-12 sm:col-6 lg:col-3 relative" routerLink="../raw-material/{{product.id}}/feature">
+        <div class="label absolute">
+            <span>In Stock</span>
+        </div>
+        <div class="">
+            <img src="{{product.image}}" class="w-full h-auto">
+        </div>
+        <div>
+            <h5 class="mb-0">{{product.name}}</h5>
+            <small class="mt-0">Color: {{product.color}}</small>
+    
+        </div>
+        <div>
+    
+        </div>
+    </div>
+    </div>
+</div>

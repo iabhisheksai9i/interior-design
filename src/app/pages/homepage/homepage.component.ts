@@ -105,23 +105,23 @@ export class HomepageComponent {
   }
 
   ngOnInit() {
-        this.responsiveOptions = [
-        {
-            breakpoint: '1400px',
-            numVisible: 3,
-            numScroll: 1
-        },
-        {
-            breakpoint: '1220px',
-            numVisible: 2,
-            numScroll: 1
-        },
-        {
-            breakpoint: '700px',
-            numVisible: 1,
-            numScroll: 1
-        }
-    ];
+    //     this.responsiveOptions = [
+    //     {
+    //         breakpoint: '1400px',
+    //         numVisible: 3,
+    //         numScroll: 1
+    //     },
+    //     {
+    //         breakpoint: '1220px',
+    //         numVisible: 2,
+    //         numScroll: 1
+    //     },
+    //     {
+    //         breakpoint: '700px',
+    //         numVisible: 1,
+    //         numScroll: 1
+    //     }
+    // ];
     this.responsiveOptionssmall = [
       {
           breakpoint: '1400px',
