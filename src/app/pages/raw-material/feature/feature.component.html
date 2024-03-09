@@ -1,16 +1,17 @@
-<div class=" pt-4 surface-ground pb-8">
-  <h1 class="flex justify-content-center pt-6 pb-5">{{product.name}}</h1>
+<div class=" pt-6 surface-ground pb-8">
+  <p-breadcrumb class="max-w-full" [model]="items"></p-breadcrumb>
+  <h1 class="flex justify-content-center py-2">{{product.name}}</h1>
   <div class="md:flex justify-content-evenly surface-ground pl-3 pr-3">
     <div class="col-12 md:col-6 p-0 mr-2">
-      <div class="flex align-items-center">
-        <div class="card py-2">
-          <p-galleria [value]="products"  [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '640px' }" [numVisible]="5">
-              <ng-template pTemplate="item" let-item>
-                  <img [src]="item.image" style="width: 100%;" />
+      <div class="flex align-items-center w-12">
+        <div class="card py-2 col-12">
+          <p-galleria [value]="product.images"  [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '640px' }" [numVisible]="5">
+              <ng-template pTemplate="item" let-image>
+                  <img [src]="image" style="width: 100%;" />
               </ng-template>
-              <ng-template pTemplate="thumbnail" let-item>
+              <ng-template pTemplate="thumbnail" let-image>
                   <div class="grid grid-nogutter justify-content-center">
-                      <img [src]="item.image" height="70px" class="w-11"/>
+                      <img [src]="image" height="70px" class="w-11"/>
                   </div>
               </ng-template>
           </p-galleria>
@@ -26,7 +27,7 @@
           <strong>talk</strong>
         </a>
       </div>
-      <div class="bg position1"></div>
+      <div class="bg position1 hidden md:block"></div>
       <h2 class="mt-8">Product Details</h2>
       <table class="w-12">
         <tbody>
@@ -72,15 +73,5 @@
   </div>
 </div>
 
-<!-- 
-<p-galleria  [responsiveOptions]="responsiveOptions" [value]="products" [containerStyle]="{ 'max-width': '640px' }" [numVisible]="5">
-  <ng-template pTemplate="item" let-item>
-      <img [src]="item.image" style="width: 100%;"/>
-  </ng-template>
-  <ng-template pTemplate="thumbnail" let-item>
-      <div class="grid grid-nogutter justify-content-center">
-          <img [src]="item.image"/>
-      </div>
-  </ng-template>
-</p-galleria> -->
+
 

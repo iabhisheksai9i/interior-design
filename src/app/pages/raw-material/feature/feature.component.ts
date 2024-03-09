@@ -4,11 +4,13 @@ import { RawMaterialService } from '../raw-material.service';
 import { ActivatedRoute } from '@angular/router';
 import { GalleriaModule } from 'primeng/galleria';
 import { FormsModule } from '@angular/forms';
+import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-feature',
   standalone: true,
-  imports: [CommonModule, GalleriaModule, FormsModule],
+  imports: [CommonModule, GalleriaModule, FormsModule,  BreadcrumbModule],
   templateUrl: './feature.component.html',
   styleUrl: './feature.component.scss'
 })
@@ -18,6 +20,10 @@ export class FeatureComponent {
   id: string = '';
   responsiveOptions: any;
   @Output() valueChange: EventEmitter<any[]> = new EventEmitter<any[]>();
+  items: MenuItem[] = [
+    { label: 'Home', icon:'',routerLink:'/home' }, 
+    { label: 'Raw material' ,routerLink:'/raw-material'}
+  ];
   
   constructor(
     private rawMaterialService: RawMaterialService,

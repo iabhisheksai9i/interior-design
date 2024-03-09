@@ -21,11 +21,17 @@ export interface IProduct {
 export class RawMaterialService {
   constructor() { }
   product: any = null; 
-  products: IProduct[] = [
+  products: any[] = [
     {
       id:'1',
       name:'light Brown Door',
-      image:'https://saina-doors.com/wp-content/uploads/2024/01/image-1.jpg"',
+      image:'https://saina-doors.com/wp-content/uploads/2024/01/image-1.jpg',
+      images:[
+        'https://saina-doors.com/wp-content/uploads/2024/01/image-1.jpg',
+        'https://saina-doors.com/wp-content/uploads/2024/01/image-2.jpg',
+        'https://saina-doors.com/wp-content/uploads/2024/01/image-1.jpg',
+        'https://saina-doors.com/wp-content/uploads/2024/01/image-2.jpg',
+      ],
       price:100,
     },
     {
