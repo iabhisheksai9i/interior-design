@@ -21,9 +21,17 @@ h2{
 a{
     font-size: 12px;
     font-weight: 500;
-}
+ }
 }
 
 .label:hover{
-    background: #465a7c;  
+    background: #465a7c; 
+}
+
+.nav-label{
+ background-color: aliceblue !important;
+ border-radius: 5px;
+ a{
+    color: black !important;
+  }
 }

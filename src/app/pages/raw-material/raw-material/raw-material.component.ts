@@ -17,6 +17,8 @@ export class RawMaterialComponent {
  rawMaterial:any[]=[];
  doors:any[]=[]
  handel:any[]=[]
+ door_locks:any[]=[]
+ glass_design:any[]=[]
 
   constructor (
     private rawMaterialService:RawMaterialService
@@ -28,8 +30,9 @@ export class RawMaterialComponent {
   }
    getRowproduct(){
    this.rawMaterial = this.rawMaterialService.products;
-   this.doors = this.rawMaterialService.doors;
-   this.handel = this.rawMaterialService.handel
+   this.handel = this.rawMaterialService.handel;
+   this.door_locks = this.rawMaterialService.door_locks;
+   this.glass_design = this.rawMaterialService.glasses_design;
 
   }
 
