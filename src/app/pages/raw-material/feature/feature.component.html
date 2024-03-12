@@ -1,7 +1,7 @@
-<div class=" pt-6 surface-ground pb-8">
+<div class="pt-6 surface-ground pb-8">
   <p-breadcrumb class="max-w-full" [model]="items"></p-breadcrumb>
   <h1 class="flex justify-content-center py-2">{{product.name}}</h1>
-  <div class="md:flex justify-content-evenly surface-ground pl-3 pr-3">
+  <div class="md:flex justify-content-evenly surface-ground pl-3 pr-3" >
     <div class="col-12 md:col-6 p-0 mr-2">
       <div class="flex align-items-center w-12">
         <div class="card py-2 col-12">
@@ -28,40 +28,40 @@
         </a>
       </div>
       <div class="bg position1 hidden md:block"></div>
-      <h2 class="mt-8">Product Details</h2>
+      <h2 class="mt-6">Product Details</h2>
       <table class="w-12">
         <tbody>
         <tr>
-          <th class="text-left w-3 text-xs md:text-base">Name</th>
+          <th class="text-left w-3 text-sm md:text-base">Name</th>
           <td class="text-end text-xs md:text-base">{{product.name}}</td>
         </tr>
         <tr>
-          <th class="text-left w-3 text-xs md:text-base">Price</th>
+          <th class="text-left w-3 text-sm md:text-base">Price</th>
           <td class="text-end text-xs md:text-base">{{product.price}}/sq.feet</td>
         </tr>
         <tr>
-          <th class="text-left line-height-3">Color</th>
-          <td class="">{{product.color}}</td>
+          <th class="text-left line-height-3  text-sm md:text-base">Color</th>
+          <td class="text-sm md:text-base">{{product.color}}</td>
         </tr>
         <tr>
-          <th class="text-left ">Handel color</th>
-          <td class="">{{product.handel_color}}</td>
+          <th class="text-left   text-sm md:text-base">Handel color</th>
+          <td class="text-sm md:text-base">{{product.handel_color}}</td>
         </tr>
         <tr>
-          <th class="text-left">Material</th>
-          <td class="">{{product.material}}</td>
+          <th class="text-left text-sm md:text-base">Material</th>
+          <td class=" text-sm md:text-base">{{product.material}}</td>
         </tr>
         <tr>
-          <th class="text-left">Size</th>
-          <td class="">{{product.size}}</td>
+          <th class="text-left text-sm md:text-base">Size</th>
+          <td class=" text-sm md:text-base">{{product.size}}</td>
         </tr>
         <tr>
-          <th class="text-left">Dimentions</th>
-          <td class="">{{product.dimension}}</td>
+          <th class="text-left  text-sm md:text-base">Dimentions</th>
+          <td class=" text-sm md:text-base">{{product.dimension}}</td>
         </tr>
         <tr>
-          <th class="text-left">Shape</th>
-          <td class="">{{product.shape}}</td>
+          <th class="text-left  text-sm md:text-base">Shape</th>
+          <td class=" text-sm md:text-base">{{product.shape}}</td>
         </tr>
       </tbody>
       </table>

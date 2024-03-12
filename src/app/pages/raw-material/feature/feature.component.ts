@@ -15,11 +15,12 @@ import { MenuItem } from 'primeng/api';
   styleUrl: './feature.component.scss'
 })
 export class FeatureComponent {
-  product: any = {}
+  product: any = []
   products: any[] = []
   id: string = '';
   responsiveOptions: any;
   @Output() valueChange: EventEmitter<any[]> = new EventEmitter<any[]>();
+
   items: MenuItem[] = [
     { label: 'Home', icon:'',routerLink:'/home' }, 
     { label: 'Raw material' ,routerLink:'/raw-material'}
@@ -53,6 +54,15 @@ export class FeatureComponent {
   }
 
   getProduct() {
-    this.product = this.rawMaterialService.products.find(product => product.id === this.id);
+       let data= this.rawMaterialService.products.forEach((product) =>{product.detail
+       if(product.detail){
+       product.detail.find((item:any) => {
+      if(item.id == this.id) {
+        this.product=item
+      };
+      })
+       }
+      });
+      
   }
 }

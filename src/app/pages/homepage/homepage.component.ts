@@ -118,9 +118,19 @@ export class HomepageComponent {
       },
       {
           breakpoint: '700px',
-          numVisible: 1,
+          numVisible: 2,
           numScroll: 1
-      }
+      },
+      {
+        breakpoint: '500px',
+        numVisible: 2,
+        numScroll: 1
+      },
+      {
+        breakpoint: '480px',
+        numVisible: 1,
+        numScroll: 1
+    }
   ];
 }
 

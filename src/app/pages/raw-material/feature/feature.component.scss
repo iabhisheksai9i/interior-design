@@ -27,4 +27,9 @@ th{
     margin-top: -38px;
 }
 
-
+:host::ng-deep{
+    .p-breadcrumb{
+      border: none;
+      background: none;
+    }
+}
