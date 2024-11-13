@@ -1,0 +1,32 @@
+<div class="pt-6 background">
+  <div class="blur pb-7">
+<form (ngSubmit)="login()">
+  <div class="flex justify-content-center" style="height: 64vh;">
+    <div>
+    <div class="card my-2">
+      <div class="flex  justify-content-center">
+      <h3>Username</h3>
+      </div>
+      <input type="text" pInputText [(ngModel)]="name" [ngModelOptions]="{standalone: true}" />
+  </div>
+  <div class="card my-2">
+    <div class="flex justify-content-center">
+    <h3>password</h3>
+    </div>
+    <div>
+    <input type="password" pInputText [(ngModel)]="password" [ngModelOptions]="{standalone: true}"/>
+    </div>
+</div>
+<div class="flex justify-content-center my-6">
+<p-button label="Submit" type="Submit" class="text-center w-full"></p-button>
+</div>
+</div>
+</div>
+  </form>
+</div>
+</div>
+<p-toast ></p-toast>
+
+
+
+

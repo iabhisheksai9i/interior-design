@@ -1,0 +1,87 @@
+<div class="pt-7">
+<div *ngFor="let product of products">
+    <div class="flex justify-content-center relative w-full">
+        <div *ngIf="buttonhide" class="p-3 flex align-items-center justify-content-right absolute right-0">
+            <p-button icon="pi pi-plus" (click)="showDialog(product.id)" [pTooltip]="tooltipContent" tooltipPosition="left"></p-button>
+            <ng-template #tooltipContent>
+                <div class="flex align-items-center">
+                    <img src="https://cdn-icons-png.freepik.com/256/11249/11249422.png" height="20" class="mr-2" />
+                    <span> <b>Add Products</b> </span>
+                </div>
+            </ng-template>
+        </div>
+        <h2 class="text-center">{{product.label}}</h2>
+    </div>
+    <div class="grid w-12 p-5">
+        <div *ngFor="let items of product.details.items" class="col-12 sm:col-6 lg:col-3 relative"
+            routerLink="../raw-material/{{items.id}}/feature">
+            <div class="label absolute">
+                <span>In Stock</span>
+            </div>
+            <div class="">
+                <img src="{{items.image}}" class="w-full h-auto border-round">
+            </div>
+            <div>
+                <h5 class="mb-0">{{items.name}}</h5>
+                <small class="mt-0">Color: {{items.color}}</small>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+
+    <p-dialog header="Add Products" [(visible)]="visible" [style]="{ width: '78vw', height: '600px' }">
+        <div>
+         <form [formGroup]="profileForm" (ngSubmit)="addObject()">
+         <div class="p-2 md:flex justify-content-center text-center">
+             <h3 class="pr-3 col-12 md:col-2 text-center md:text-right m-0">NAME</h3>
+         <input pInputText type="text" placeholder="name" formControlName="name" form class="col-12 md:col-6"/>
+         </div>
+         <div class="p-2 md:flex justify-content-center text-center">
+             <h3 class="pr-3 col-12 md:col-2 text-center md:text-right m-0">COLOR</h3>
+         <input pInputText type="text" placeholder="color" formControlName="color" class="col-12 md:col-6"/>
+         </div>
+         <div class="p-2 md:flex justify-content-center text-center">
+             <h3 class="pr-3 col-12 md:col-2 text-center md:text-right m-0">mage</h3>
+         <input pInputText type="text" placeholder="image" formControlName="image" class="col-12 md:col-6"/>
+         </div>
+         <div class="p-2 md:flex justify-content-center text-center">
+             <h3 class="pr-3 col-12 md:col-2 text-center md:text-right m-0">Price</h3>
+         <input pInputText type="text" placeholder="price" class="col-12 md:col-6" formControlName="price"/>
+         </div>
+         <div class="p-2 md:flex justify-content-center text-center">
+             <h3 class="pr-3 col-12 md:col-2 text-center md:text-right m-0">Material</h3>
+         <input pInputText type="text" placeholder="material" class="col-12 md:col-6" formControlName="material"/>
+         </div>
+         <div class="p-2 md:flex justify-content-center text-center">
+             <h3 class="pr-3 col-12 md:col-2 text-center md:text-right m-0">Dimentions</h3>
+         <input pInputText type="text" placeholder="dimentions" class="col-12 md:col-6" formControlName="dimentions"/>
+         </div>
+         <div class="p-2 md:flex justify-content-center text-center">
+             <h3 class="pr-3 col-12 md:col-2 text-center md:text-right m-0">Handel Color</h3>
+         <input pInputText type="text" placeholder="Handel Color" class="col-12 md:col-6" formControlName="handel_color"/>
+         </div>
+         <div class="p-2 md:flex justify-content-center text-center">
+             <h3 class="col-12 md:col-2 text-center md:text-right pr-3 m-0">Shape</h3>
+         <input pInputText type="text" placeholder="shape" class="col-12 md:col-6" formControlName="shape"/>
+         </div>
+         <div class="flex justify-content-center">
+         <button pButton pRipple label="Submit" [disabled]="!profileForm.valid" class="p-button-success p-2"></button>
+         </div>
+       </form>
+        </div>
+     </p-dialog>
+
+</div>
+</div>
+<p-toast ></p-toast>
+
+
+
+
+<!-- <div class="wrapper">
+    <div class="top">Sliced</div>
+    <div class="bottom" aria-hidden="true">Sliced</div>
+</div> -->

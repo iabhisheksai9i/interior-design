@@ -1,0 +1,31 @@
+:host::ng-deep{
+    .p-ripple{
+        width: 100%;
+        border-radius: 20px;
+    }
+    .p-inputtext{
+        border-radius: 20px;
+    }
+
+    .p-button{
+        background:#fe953a;
+        border-color: #fe953a;
+    }
+    .p-button:hover{
+        background: #fe953a;
+    }
+}
+
+.background{
+    background: url(https://png.pngtree.com/thumb_back/fw800/background/20230718/pngtree-contemporary-authentic-3d-renderings-of-web-login-page-templates-image_3904126.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h3{
+    color: white;
+}
+
+.blur{
+    backdrop-filter: blur(10px)
+}

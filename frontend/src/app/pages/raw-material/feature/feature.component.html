@@ -1,0 +1,77 @@
+<div class="pt-6 surface-ground pb-8">
+  <p-breadcrumb class="max-w-full" [model]="items"></p-breadcrumb>
+  <h1 class="flex justify-content-center py-2 trans">{{product.name}}</h1>
+  <div class="md:flex justify-content-evenly surface-ground pl-3 pr-3" >
+    <div class="col-12 md:col-6 p-0 mr-2">
+      <div class="flex align-items-center w-12">
+        <div class="card py-2 col-12">
+          <p-galleria [value]="product.images"  [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '640px' }" [numVisible]="5">
+              <ng-template pTemplate="item" let-image>
+                  <img [src]="image" style="width: 100%;" />
+              </ng-template>
+              <ng-template pTemplate="thumbnail" let-image>
+                  <div class="grid grid-nogutter justify-content-center">
+                      <img [src]="image" height="70px" class="w-11"/>
+                  </div>
+              </ng-template>
+          </p-galleria>
+        </div>
+        
+      </div>
+    </div>
+    <div class="border-1 surface-border bg-white col-12 md:col-6 relative ">
+      <div class="hidden md:block bg-blue-400 border-noround p-4 w-5rem absolute right-0 margin-t position" routerLink="../">
+        <a class="no-underline" href="raw-material/{{product.id}}/feature#footer">
+          Let's
+          <br>
+          <strong>talk</strong>
+        </a>
+      </div>
+      <div class="bg position1 hidden md:block"></div>
+      <h2 class="mt-6">Product Details</h2>
+      <table class="w-12">
+        <tbody>
+        <tr>
+          <th class="text-left w-3 text-sm md:text-base">Name</th>
+          <td class="text-end text-xs md:text-base">{{product.name}}</td>
+        </tr>
+        <tr>
+          <th class="text-left w-3 text-sm md:text-base">Price</th>
+          <td class="text-end text-xs md:text-base">{{product.price}}/sq.feet</td>
+        </tr>
+        <tr>
+          <th class="text-left line-height-3  text-sm md:text-base">Color</th>
+          <td class="text-sm md:text-base">{{product.color}}</td>
+        </tr>
+        <tr>
+          <th class="text-left   text-sm md:text-base">Handel color</th>
+          <td class="text-sm md:text-base">{{product.handel_color}}</td>
+        </tr>
+        <tr>
+          <th class="text-left text-sm md:text-base">Material</th>
+          <td class=" text-sm md:text-base">{{product.material}}</td>
+        </tr>
+        <tr>
+          <th class="text-left text-sm md:text-base">Size</th>
+          <td class=" text-sm md:text-base">{{product.size}}</td>
+        </tr>
+        <tr>
+          <th class="text-left  text-sm md:text-base">Dimentions</th>
+          <td class=" text-sm md:text-base">{{product.dimension}}</td>
+        </tr>
+        <tr>
+          <th class="text-left  text-sm md:text-base">Shape</th>
+          <td class=" text-sm md:text-base">{{product.shape}}</td>
+        </tr>
+      </tbody>
+      </table>
+      <div class="border-top-1 ">
+        <p class="text-sm ml-2 ">We can supply aluminium slim profile for glass doors in quanity.
+          These are readily available in stock and are supplied at reasonable rate</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

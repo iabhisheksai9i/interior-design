@@ -1,0 +1,31 @@
+<div class="pt-6 background">
+    <div class="pt-7 flex justify-content-center blur">
+        <form (ngSubmit)="sendDataToServer()">
+            <div>
+            <h4>Name</h4>
+            <input type="text" pInputText [(ngModel)]="name" [ngModelOptions]="{standalone: true}" />
+            </div>
+            <div>
+            <h4>Username</h4>
+            <input type="text" pInputText [(ngModel)]="username" [ngModelOptions]="{standalone: true}" />
+            </div>
+            <div>
+            <h4>Email id</h4>
+            <input type="text" pInputText [(ngModel)]="email_id" [ngModelOptions]="{standalone: true}" />
+            </div>
+            <div>
+            <h4>Password</h4>
+            <input type="text" pInputText [(ngModel)]="password" [ngModelOptions]="{standalone: true}" />
+            </div>
+            <div class="flex justify-content-center my-6">
+                <p-button label="Submit" type="Submit" class="text-center w-full"></p-button>
+                </div>
+          </form>
+        </div>
+
+        <div>
+            <h1 class="trans">
+                Abhishek
+            </h1>
+        </div>
+</div>

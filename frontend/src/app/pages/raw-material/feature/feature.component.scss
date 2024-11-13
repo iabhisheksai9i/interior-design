@@ -1,0 +1,43 @@
+th,td{
+    padding: 10px;
+}
+
+th{
+    width:50%
+}
+
+.margin-t{
+    margin-top: -3rem;
+    margin-right: 1rem;
+}
+
+.position{
+    position: relative;
+ }
+ 
+.position1 {
+    position: absolute;
+}
+
+.bg {
+    border-bottom: 18px solid #030303;
+    border-left: 16px solid transparent;
+    top: 0;
+    right: 95px;
+    margin-top: -38px;
+}
+
+:host::ng-deep{
+    .p-breadcrumb{
+      border: none;
+      background: none;
+    }
+}
+
+// .trans{
+//     -webkit-text-stroke: 2px black; 
+//     color:rgba(61, 61, 61, 0); 
+//     font-family:Montserrat, sans-serif; 
+//     font-size: 30px; 
+//     margin: 0;
+//     }
